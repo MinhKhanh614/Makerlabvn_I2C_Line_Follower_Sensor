@@ -1,3 +1,4 @@
+#include "HardwareSerial.h"
 #include "Makerlabvn_I2C_Line_Follower_Sensor.h"
 
 void Makerlabvn_I2C_Line_Follower_Sensor::setup()
@@ -14,6 +15,7 @@ void Makerlabvn_I2C_Line_Follower_Sensor::loop()
     {
         readValue[i] = Wire.read();
     }
+    // Serial.println("KDEBUG DELAY");
     kDelay(10);
 }
 
@@ -22,7 +24,7 @@ void Makerlabvn_I2C_Line_Follower_Sensor::getData()
     run(millis());
 }
 
-int Makerlabvn_I2C_Line_Follower_Sensor::getValue(uint8_t index)
+uint8_t Makerlabvn_I2C_Line_Follower_Sensor::getValue(uint8_t index)
 {
     return readValue[index];
 }
