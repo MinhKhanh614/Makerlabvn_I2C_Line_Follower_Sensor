@@ -7,6 +7,7 @@ void Makerlabvn_I2C_Line_Follower_Sensor::setup(uint8_t paAddress, uint8_t paCou
     Wire.begin();
     kxnTaskManager.add(this);
     setState(KXN_TASK_STATE_START);
+    setBlack();
 }
 
 void Makerlabvn_I2C_Line_Follower_Sensor::loop()
@@ -15,6 +16,10 @@ void Makerlabvn_I2C_Line_Follower_Sensor::loop()
     for (int i = 0; i < MAKERLABVN_I2C_LINE_FOLLOWER_SENSOR_BUFFER_SIZE; i++)
     {
         readValue[i] = Wire.read();
+    }
+    if(!isBlack)
+    {
+        readValue[countSensor] = (readValue[countSensor] ^ 0b11111) & 0b11111;
     }
     kDelay(10);
 }
@@ -34,7 +39,7 @@ uint8_t Makerlabvn_I2C_Line_Follower_Sensor::getValue(uint8_t index)
     return (readValue[countSensor] >> index) & 0x01;
 }
 
-uint8_t Makerlabvn_I2C_Line_Follower_Sensor::getDrawValue(uint8_t index)
+uint8_t Makerlabvn_I2C_Line_Follower_Sensor::getRawValue(uint8_t index)
 {
     return readValue[index];
 }

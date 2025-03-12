@@ -18,15 +18,15 @@ void loop()
     LineFollowSensor.getData();
     
     Serial.print("P1:");
-    Serial.print(LineFollowSensor.getDrawValue(0));
+    Serial.print(LineFollowSensor.getRawValue(0));
     Serial.print(" P2:");
-    Serial.print(LineFollowSensor.getDrawValue(1));
+    Serial.print(LineFollowSensor.getRawValue(1));
     Serial.print(" P3:");
-    Serial.print(LineFollowSensor.getDrawValue(2));
+    Serial.print(LineFollowSensor.getRawValue(2));
     Serial.print(" P4:");
-    Serial.print(LineFollowSensor.getDrawValue(3));
+    Serial.print(LineFollowSensor.getRawValue(3));
     Serial.print(" P5:");
-    Serial.print(LineFollowSensor.getDrawValue(4));
+    Serial.print(LineFollowSensor.getRawValue(4));
 
     Serial.print(" data:");
     Serial.println(LineFollowSensor.getValue(), BIN);
