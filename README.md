@@ -25,7 +25,7 @@ Here is a simple example to get you started:
         - P3 ---- to ---- 5
         - P4 ---- to ---- 6
         - P5 ---- to ---- 7
-        - VCC --- to ----5V
+        - 5V  --- to ---- 5V
         - GND --- to ----GND
 */
 
@@ -75,7 +75,7 @@ void loop()
         Sensor  ------ Arduino Uno
         - SDA --- to ----A4
         - SCL --- to ----A5
-        - VCC --- to ----5V
+        - 5V  --- to ----5V
         - GND --- to ----GND
 */
 #include "Makerlabvn_I2C_Line_Follower_Sensor.h"
