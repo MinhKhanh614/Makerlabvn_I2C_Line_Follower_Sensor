@@ -1,3 +1,11 @@
+/*
+    Wiring:
+        Sensor  ------ Arduino Uno
+        - SDA --- to ----A4
+        - SCL --- to ----A5
+        - VCC --- to ----5V
+        - GND --- to ----GND
+*/
 #include "Makerlabvn_I2C_Line_Follower_Sensor.h"
 
 Makerlabvn_I2C_Line_Follower_Sensor LineFollowSensor;

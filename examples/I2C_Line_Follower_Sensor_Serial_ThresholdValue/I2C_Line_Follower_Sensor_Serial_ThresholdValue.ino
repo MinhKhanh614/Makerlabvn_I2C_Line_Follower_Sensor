@@ -2,6 +2,13 @@
   Note:
     - Place the sensor on a darker area and press the S1 button on the sensor.
     - The sensor will automatically determine the threshold values for comparison and output.
+
+  Wiring:
+    Sensor  ------ Arduino Uno
+    - SDA --- to ----A4
+    - SCL --- to ----A5
+    - VCC --- to ----5V
+    - GND --- to ----GND
 */
 #include "Makerlabvn_I2C_Line_Follower_Sensor.h"
 
