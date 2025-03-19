@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "Makerlabvn_I2C_Line_Follower_Sensor.h"
 #include <MKL_LiquidCrystal_I2C.h>
 
@@ -10,10 +11,28 @@ void setup()
     lcd.init();
     lcd.backlight();
     LineFollowSensor.setup();
+=======
+/*
+    Wiring:
+        Sensor  ------ Arduino Uno
+        - SDA --- to ----A4
+        - SCL --- to ----A5
+        - 5V  --- to ----5V
+        - GND --- to ----GND
+*/
+#include "kxnTaskShowValueSensor.h"
+
+kxnTaskShowValueSensor kxnTaskShowValueSensor1;
+
+void setup()
+{
+    kxnTaskShowValueSensor1.setup();
+>>>>>>> 4a5ad13b640970a9daa05f81b108e285aa147bfa
 }
 void loop()
 {
     kxnTaskManager.run(millis());
+<<<<<<< HEAD
     /****** THỨ TỰ SENSOR ******/
     /*-------------------------*/
     /* |TRÁI| 1 2 3 4 5 |PHẢI| */
@@ -48,4 +67,6 @@ void loop()
     Serial.println();
 
     delay(100);
+=======
+>>>>>>> 4a5ad13b640970a9daa05f81b108e285aa147bfa
 }
